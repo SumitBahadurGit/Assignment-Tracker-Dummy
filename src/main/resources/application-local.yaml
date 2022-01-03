@@ -3,10 +3,10 @@ spring:
   application:
     name: ASSIGNMENT-TRACKER
   datasource:
-    url: jdbc:oracle:thin:@ast.caa7t0rarfoh.us-east-1.rds.amazonaws.com:1521/DATABASE
+    url: //todo
     driver-class-name: oracle.jdbc.OracleDriver
-    username: admin
-    password: Awskopw25!
+    username: //todo
+    password: //todo
   jpa:
     properties:
       hibernate:
