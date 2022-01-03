@@ -1,0 +1,45 @@
+service:
+  upload:
+    dir: /Users/alphasumittango/Static
+  remote:
+    url:
+      employment-tracker: http://3.91.78.115:8090/EMPLOYMENT-TRACKER/v1/employment
+      doc-services: http://3.91.78.115:8090/DOC-SERVICES/v1/doc-service
+      notification-service: http://3.91.78.115:8090/NOTIFICATION-SERVICE/v1/notifications
+spring:
+  application:
+    name: ASSIGNMENT-TRACKER
+  datasource:
+    url: jdbc:oracle:thin:@ast.caa7t0rarfoh.us-east-1.rds.amazonaws.com:1521/DATABASE
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: admin
+    password: Awskopw25!
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        user_sql_comments: true
+        format_sql: true
+    generate-ddl: true
+    hibernate:       
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://3.91.78.115:8761/eureka
+  instance:
+    hostname: ${HOST}
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - 'info'
