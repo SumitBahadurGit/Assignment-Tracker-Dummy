@@ -10,10 +10,10 @@ spring:
   application:
     name: ASSIGNMENT-TRACKER
   datasource:
-    url: //todo
-    driver-class-name: oracle.jdbc.OracleDriver
-    username: //todop
-    password: //todo
+  spring.datasource.url=jdbc:oracle:thin:@//kuebeko.caa7t0rarfoh.us-east-1.rds.amazonaws.com:1521/DATABASE
+  spring.datasource.username=admin
+  spring.datasource.password=Clakopw25!
+  spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
   jpa:
     properties:
       hibernate:
@@ -31,12 +31,12 @@ spring:
 server:
   port: 8080
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://3.91.78.115:8761/eureka
-  instance:
-    hostname: ${HOST}
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://3.91.78.115:8761/eureka
+#  instance:
+#    hostname: ${HOST}
 management:
   endpoints:
     web:
